@@ -1,0 +1,10 @@
+.exchange_return {
+    display: flex;
+    padding: 15px;
+    width: 514px;
+}
+
+main>div>a>div {
+    margin: 0 110px;
+    text-align: center;
+}
