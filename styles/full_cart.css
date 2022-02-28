@@ -24,3 +24,9 @@ main {
     padding: 45px 74px;
     display: flex;
 }
+
+@media (prefers-color-scheme: dark) {
+    main>div {
+        background-color: #4A4A4A;
+    }
+}

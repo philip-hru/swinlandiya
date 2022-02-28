@@ -85,3 +85,41 @@ main {
     min-height: calc(100vh - 128px - 75px);
     box-sizing: border-box;
 }
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: #E8E8E8;
+    }
+
+    header {
+        background-color: #4A4A4A;
+    }
+
+    header>nav>ul>li>a {
+        color: #E8E8E8;
+    }
+
+    main {
+        background-color: #777676;
+    }
+
+    header>a {
+        color: #E8E8E8;
+    }
+
+    .button {
+        background-color: #967878;
+        color: black;
+    }
+
+    footer {
+        background-color: #4A4A4A;
+    }
+
+    .footer_icons_text {
+        color: rgb(140 179 255);
+    }
+
+
+
+}

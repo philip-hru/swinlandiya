@@ -71,3 +71,14 @@ main>div:nth-child(2n)>a {
         transform: scale(1);
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    main>div {
+        background-color: #4A4A4A;
+    }
+
+    .price {
+        color: #E8E8E8;
+    }
+
+}

@@ -19,8 +19,13 @@ main>div {
 }
 
 .headline {
+    margin: auto;
     max-width: 600px;
     font-size: 30px;
+}
+
+.in_headline {
+    text-align: center;
 }
 
 .cards {
