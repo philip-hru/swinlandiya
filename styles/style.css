@@ -61,6 +61,16 @@ footer>div {
     color: #0057ff;
 }
 
+.icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer_icons_text {
+    padding-left: 10px;
+}
+
 footer {
     display: flex;
     justify-content: space-evenly;
@@ -72,6 +82,6 @@ footer {
 
 main {
     padding: 10px;
-    min-height: calc(100vh - 143px);
+    min-height: calc(100vh - 128px - 75px);
     box-sizing: border-box;
 }

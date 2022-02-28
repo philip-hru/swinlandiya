@@ -1,9 +1,11 @@
-img {
-    width: 200px;
+.main_img1 {
+    width: 500px;
 }
 
-main {
-    justify-content: space-between;
+.main_img2 {
+    object-fit: cover;
+    width: 500px;
+    height: 359px;
 }
 
 main>div {
