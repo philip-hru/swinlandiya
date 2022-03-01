@@ -18,11 +18,11 @@ main>div>img {
 }
 
 main {
-    justify-content: center;
-    gap: 59px 124px;
-    flex-wrap: wrap;
-    padding: 45px 74px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 59px 124px;
+    padding: 45px 74px
 }
 
 @media (prefers-color-scheme: dark) {
