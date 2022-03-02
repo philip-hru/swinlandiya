@@ -8,6 +8,7 @@ body {
 
 .logo_search {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
@@ -20,7 +21,6 @@ header {
     justify-content: space-between;
     font-size: 20px;
     padding: 0 16px;
-    height: 75px;
 }
 
 .menu__box {
@@ -33,6 +33,10 @@ header {
 
 .menu__item {
     padding: 0 10px;
+}
+
+form {
+    margin: auto;
 }
 
 a {
@@ -76,11 +80,29 @@ input::-webkit-calendar-picker-indicator {
 
 }
 
+form {
+    display: flex;
+    position: relative;
+}
+
+.search {
+    margin-bottom: 5px;
+    padding: 7px;
+}
+
+.submit {
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    right: 2px;
+}
+
 .menu__btn {
     z-index: 20;
 }
 
 #menu__toggle {
+    position: absolute;
     opacity: 0;
 }
 
@@ -100,7 +122,6 @@ footer>div {
 
 footer {
     display: flex;
-    justify-content: space-evenly;
     padding: 20px;
     gap: 50px;
     border: 1px solid black;
@@ -109,21 +130,108 @@ footer {
 
 main {
     padding: 10px;
-    min-height: calc(100vh - 128px - 75px);
+    min-height: calc(100vh - 148px - 75px);
     box-sizing: border-box;
 }
 
 .search {
+    width: 100%;
     border-radius: 6px;
-    padding: 5px;
+    padding: 7px;
     border: none;
 }
 
 .submit {
-    position: relative;
-    left: -30px;
     background-color: transparent;
     border: none;
+}
+
+@media (max-width: 768px) {
+
+
+    /* стилизуем кнопку */
+    .menu__btn {
+        display: flex;
+        /* используем flex для центрирования содержимого */
+        align-items: center;
+        /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 26px;
+        height: 26px;
+        z-index: 20;
+    }
+
+    /* добавляем "гамбургер" */
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #ECEFF1;
+    }
+
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+
+    #menu__toggle:checked~.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked~.menu__box {
+        visibility: visible;
+        right: 0;
+        animation-name: fadeInRight;
+        animation-duration: 1000ms;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -168,92 +276,22 @@ main {
         color: #E8E8E8;
     }
 
+    @media (max-width: 768px) {
+        .menu__box {
+            background-color: #333;
+        }
+    }
+
 }
 
-@media (max-width: 768px) {
-
-
-    /* стилизуем кнопку */
-    .menu__btn {
-        display: flex;
-        /* используем flex для центрирования содержимого */
-        align-items: center;
-        /* центрируем содержимое кнопки */
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        width: 26px;
-        height: 26px;
-        z-index: 1;
-    }
-
-    /* добавляем "гамбургер" */
-    .menu__btn>span,
-    .menu__btn>span::before,
-    .menu__btn>span::after {
-        display: block;
-        position: absolute;
+@media (max-width: 358px) {
+    form {
         width: 100%;
-        height: 2px;
-        background-color: #616161;
     }
+}
 
-    .menu__btn>span::before {
-        content: '';
-        top: -8px;
-    }
-
-    .menu__btn>span::after {
-        content: '';
-        top: 8px;
-    }
-
-    /* контейнер меню */
-    .menu__box {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 30%;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        text-align: center;
-        background-color: #ECEFF1;
-    }
-
-    /* элементы меню */
-    .menu__item {
-        display: block;
-        padding: 12px 24px;
-        color: #333;
-        text-decoration: none;
-    }
-
-    .menu__item:hover {
-        background-color: #CFD8DC;
-    }
-
-    #menu__toggle:checked~.menu__btn>span {
-        transform: rotate(45deg);
-    }
-
-    #menu__toggle:checked~.menu__btn>span::before {
-        top: 0;
-        transform: rotate(0);
-    }
-
-    #menu__toggle:checked~.menu__btn>span::after {
-        top: 0;
-        transform: rotate(90deg);
-    }
-
-    #menu__toggle:checked~.menu__box {
-        visibility: visible;
-        left: 0;
-        animation-name: backInLeft;
-        animation-duration: 1000ms;
+@media (min-width: 576px) {
+    footer {
+        justify-content: space-evenly;
     }
 }
