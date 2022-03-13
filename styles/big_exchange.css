@@ -1,5 +1,5 @@
-img {
-    width: 310px;
+.main_img {
+    max-width: 310px;
     padding: 100px;
 }
 
