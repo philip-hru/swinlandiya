@@ -1,0 +1,13 @@
+.new_img {
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    overflow: auto;
+}
+
+.imgs_wraper {
+    display: flex;
+    width: 2000px;
+}
