@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/buy.css">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,32 +50,54 @@
         </nav>
     </header>
     <main>
-        <div class="cart">
+        <dialog>
+            <div class="main_buy">
+
+                <div>
+                    <img class="main_img" src="images/image 2.jpg" alt="">
+                </div>
+                <div class="text_button">
+                    <div class="main_text">
+                        <P>ЕСЛИ ВЫ СОБИРАЕТЕСЬ СТАТЬ СЧАСТЛИВЫМ ОБЛАДАТЕЛЕМ МИНИ-ПИГА, ТО ВАМ НУЖНО БЫТЬ ГОТОВЫМ К ТОМУ,
+                            ЧТО
+                            ПОРОСЕНОК
+                            ТРЕБУЕТ
+                            ПОСТОЯННОГО ВНИМАНИЯ И УХОДА</P>
+                    </div>
+                    <div class="buttons">
+                        <a href="" class="button button_buy">ОФОРМИТЬ ЗАКАЗ</a>
+                        <a class="button button_buy" onclick="add_pig()">ДОБАВИТЬ В КОРЗИНУ</a>
+                    </div>
+                </div>
+            </div>
+            <button class="close_cros" onclick="close_dialog()">❌</button>
+        </dialog>
+        <div class="card">
+            <img src="images/image 2.jpg" alt="">
+            <a onclick="show_dialog()" class="button">купить</a>
+            <div class="price">1000 грн</div>
+        </div>
+        <div class="card">
             <img src="images/image 2.jpg" alt="">
             <a href="buy.html" class="button">купить</a>
             <div class="price">1000 грн</div>
         </div>
-        <div class="cart">
+        <div class="card">
             <img src="images/image 2.jpg" alt="">
             <a href="buy.html" class="button">купить</a>
             <div class="price">1000 грн</div>
         </div>
-        <div class="cart">
+        <div class="card">
             <img src="images/image 2.jpg" alt="">
             <a href="buy.html" class="button">купить</a>
             <div class="price">1000 грн</div>
         </div>
-        <div class="cart">
+        <div class="card">
             <img src="images/image 2.jpg" alt="">
             <a href="buy.html" class="button">купить</a>
             <div class="price">1000 грн</div>
         </div>
-        <div class="cart">
-            <img src="images/image 2.jpg" alt="">
-            <a href="buy.html" class="button">купить</a>
-            <div class="price">1000 грн</div>
-        </div>
-        <div class="cart">
+        <div class="card">
             <img src="images/image 2.jpg" alt="">
             <a href="buy.html" class="button">купить</a>
             <div class="price">1000 грн</div>
