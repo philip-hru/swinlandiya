@@ -166,6 +166,9 @@ main {
 
 @media (max-width: 768px) {
 
+    .circle_on_card {
+        right: 7px;
+    }
 
     /* стилизуем кнопку */
     .menu__btn {
@@ -302,7 +305,7 @@ main {
 
 }
 
-@media (max-width: 358px) {
+@media (max-width: 370px) {
     form {
         width: 100%;
     }
