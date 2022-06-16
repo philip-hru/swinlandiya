@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="card_pig(), tytyty()">
     <header>
         <div class="logo_search">
             <a href="index.html">
@@ -33,6 +33,9 @@
                 </label>
                 <ul class="menu__box">
                     <li>
+                        <a class="menu__item" href="news.html">НОВОСТИ</a>
+                    </li>
+                    <li>
                         <a class="menu__item" href="about.html">О НАС</a>
                     </li>
                     <li>
@@ -40,7 +43,7 @@
                     </li>
                     <li class="cart">
                         <a class="menu__item" href="full_card.html">
-                            <div class="circle_on_card">0</div> КОРЗИНА
+                            <div id="circle_on_card" class="circle_on_card">0</div> КОРЗИНА
                         </a>
                     </li>
                 </ul>
@@ -48,20 +51,20 @@
         </nav>
     </header>
     <main>
-        <div>
+        <div id="card_pig_1" class="card">
             <img src="images/image 2.jpg" alt="">
-            <a href="buy.html" class="button">купить</a>
-            <div class="price">1000 грн</div>
+            <a href="" class="button">купить</a>
+            <div id="price" class="price">1000 грн</div>
         </div>
-        <div>
+        <div id="card_pig_2" class="card">
             <img src="images/image 2.jpg" alt="">
-            <a href="buy.html" class="button">купить</a>
-            <div class="price">1000 грн</div>
+            <a href="" class="button">купить</a>
+            <div class="price">2000 грн</div>
         </div>
-        <div>
+        <div id="card_pig_3" class="card">
             <img src="images/image 2.jpg" alt="">
-            <a href="buy.html" class="button">купить</a>
-            <div class="price">1000 грн</div>
+            <a href="" class="button">купить</a>
+            <div class="price">3000 грн</div>
         </div>
     </main>
     <footer>
@@ -86,4 +89,5 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>

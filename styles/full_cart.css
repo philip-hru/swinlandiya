@@ -25,6 +25,18 @@ main {
     padding: 45px 74px
 }
 
+#card_pig_1 {
+    display: none;
+}
+
+#card_pig_2 {
+    display: none;
+}
+
+#card_pig_3 {
+    display: none;
+}
+
 @media (prefers-color-scheme: dark) {
     main>div {
         background-color: #4A4A4A;
